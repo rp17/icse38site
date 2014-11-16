@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %} ICSE 2016 Austin :: Home {% endblock title %}
+
+{% block content %}
+	<!-- Place somewhere in the <body> of your page -->
+	<!-- <article class="hero" style="position: relative;"> -->
+	<article class="flexslider">
+	  <ul class="slides">
+	    <!-- <li> -->
+	    <!--   <img src="{{ STATIC_URL }}images/blue_bonnets.jpg" /> -->
+	    <!-- </li> -->
+	    <li>
+	      <img src="{{ STATIC_URL }}images/austin1.jpg" />
+	    </li>
+	    <li>
+	      <img src="{{ STATIC_URL }}images/austin2.jpg" />
+	    </li>
+	    <li>
+	      <img src="{{ STATIC_URL }}images/austin3.jpg" />
+	    </li>
+	    <li>
+	      <img src="{{ STATIC_URL }}images/austin4.jpg" />
+	    </li>
+	    <li>
+	      <img src="{{ STATIC_URL }}images/austin5.jpg" />
+	    </li>
+	  </ul>
+	</article>
+
+
+
+        <article class="main">
+          <h1>The 38<sup>th</sup> International<br />Conference on Software Engineering<br />Austin, TX, May 14 - 22, 2016 </h1>
+          <p>ICSE &mdash; the premier conference in software engineering sponsored by ACM and IEEE CS &mdash; is coming to Austin for a second time in May 14 - 22, 2016. There, the top minds in software engineering research and practice will convene for a week of inspirational talks, demos and conversation. A quarter-century after the Texas state capitol first hosted ICSE, Austin has become a hub for technology, entrepreneurship, music, outdoor recreation and nightlife.  ICSE 2016 will be located in the lovely Austin Arboretum Area &mdash; known as  “new Austin” &mdash; at the start of the Texas hill country and at the peak of the Texas wildflower season. What better setting could there be for flourishing ideas?</p>  
+
+          <p>Please mark your calendars. Contribute your results and ideas. Then plan to join us to make the 38th ICSE one for the record books since, as the saying goes, <em>&ldquo;Everything is bigger in Texas!&rdquo;</em></p>
+        </article>
+
+            <!-- Right-hand News box-->
+            <article class="news">
+                <h2>News</h2>
+                
+                <ul>
+                    
+                    <li>
+                        <h4>05 May 2014</h4>
+                        <p>ICSE 2016 <a href="http://twitter.com/icse2016">twitter</a> and <a href="http://facebook.com/icse2016">facebook</a> sites started</p>
+                    </li>
+                    
+                </ul>
+            </article>
+
+
+            <!-- Information Box -->
+            <article class="info">
+                <p>For more information please contact the appropriate individual(s) on the <a href="http://2016.icse.cs.txstate.edu/team/organizing-committee">Organizing committee</a>.</p>
+                <p>For general information contact: <a href="mailto:icse2016@icse-conferences.org"> icse2016@icse-conferences.org</a></p>
+            </article>
+
+
+            <!-- Social Footer -->
+            <footer>
+                <article class="copyright">
+                    <p>ICSE is the premier software engineering conference, providing a forum for researchers, practitioners and educators to present and discuss the most recent innovations, trends, experiences and concerns in the field of software engineering. Note that ICSE: International Conference on Software Engineering is a registered trademark.</p>
+		    <p>Conferences affiliated with WASET: the World Academy of Science, Engineering and Technology are not affiliated, associated or otherwise sponsored by ACM.</p>
+                </article>
+                
+                <article class="social_feed">
+		 <!-- default is 520×600px -->
+		<a class="twitter-timeline" width="600" height="380" href="https://twitter.com/icse2016" data-widget-id="473081849036550146">Tweets by @icse2016</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </article>
+                
+                <article class="social_feed">
+		<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Ficse2016&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=253797987989891" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+                </article>
+            </footer>
+	 
+{% endblock content %}

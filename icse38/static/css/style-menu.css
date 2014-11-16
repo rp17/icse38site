@@ -1,0 +1,47 @@
+/* Type styles */
+@font-face {
+    font-family: LeagueRegular;
+    src: url(/static/fonts/LeagueGothic-Regular.otf);
+}
+
+#page{ 
+  display: table;
+  width: 100%;       
+  background-color:#000000;
+}
+
+
+#page *{        
+         /* clear:both; */
+        /* width:100%; */
+        /* background-color:#000000; */
+        /* overflow: hidden; */
+        /* visibility: visible; */
+        font-size: 1em;
+        line-height: 1em;
+        margin-top:0.5em;
+        margin-bottom:0.5em;
+        margin-right:1.5em;
+        color:#ffffff;
+        letter-spacing:0.05em;
+        padding: 0; margin: 0}
+ 
+#page ul {list-style: none;}
+
+#page ul li {float: left; padding-right: 1px; position: relative;}
+
+#page ul a {display: table-cell; vertical-align: middle; width: 100px; height: 50px; text-align: center; background: #000000; color: #fff; text-decoration: none;}
+
+#page ul a:hover {background:#09c;}
+
+#page li > ul {display: none; position: absolute; left: 0; top: 100%;}
+
+#page li:hover > ul {display: block}
+
+#page li > ul li {padding: 0; padding-top: 1px;}
+
+#page li > ul li > ul {left: 100%; top: 0; padding-left: 1px;}
+
+#page li > ul li > ul li {width: 100px;}
+
+#page li:hover > a {background:#09c;}

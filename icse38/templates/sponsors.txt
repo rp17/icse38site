@@ -1,0 +1,10 @@
+<div class="custom"  >
+		<p style="text-align: left;">SPONSORS</p>
+		<hr />
+		<p>
+		<a href="http://www.computer.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/IEEE_Computer_Society-logo.jpg" alt="" width="133" height="70" /></a> 
+		<a href="http://www.computer.org/portal/web/tcse/home" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/2009TCSE3.jpg" alt="" width="133" height="70" /></a> 
+		<a href="http://www.acm.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/ACM.jpg" alt="" width="133" height="70" /></a> 
+		<a href="http://www.sigsoft.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/sigsoft.logo.jpg" alt="" width="133" height="70" /></a>
+		</p>
+		</div>

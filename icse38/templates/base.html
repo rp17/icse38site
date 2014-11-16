@@ -1,0 +1,208 @@
+{# simple base.html #}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+
+	{% block settings %}
+	<link rel="shortcut icon" href="{{ STATIC_URL }}images/icse_favicon.png?v=2" />
+
+	<!--Links to the main Style Sheet-->
+        <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- Place somewhere in the <head> of your document -->
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/flexslider.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
+
+	<!-- Place in the <head>, after the three links -->
+	<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.flexslider').flexslider({
+	  directionNav: false,
+	  controlNav: false
+	  });
+	  });
+	</script>
+        
+        <!--Links to a modernizer JavaScript file that fixes a lot of issues with old browsers-->
+        <script src="{{ STATIC_URL }}js/modernizr.js"></script>
+        
+        <!--Makes the site so it won't scale down on small devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <!--Don't forget to fill these out!-->
+        <meta name="description" content="ICSE is the premier software engineering conference, providing a forum for researchers, practitioners and educators to present and discuss the most recent innovations, trends, experiences and concerns in the field of software engineering." />
+	{% endblock settings %}
+
+	<title>
+	{% block title %}   
+	ICSE 2016 Austin :: Base
+	{% endblock title %}
+	</title>
+    </head>
+
+    <body>
+      <div class="wrapper">
+      {% block top %} 
+	<header class="social">
+	  <a href="http://facebook.com/icse2016">
+	    <img src="{{ STATIC_URL }}images/fb_icon.png" alt="Follow ICSE on Facebook" />
+	  </a>
+	  <a href="http://twitter.com/icse2016">
+	    <img src="{{ STATIC_URL }}images/twitter_icon.png" alt="Follow ICSE on Twitter" />
+	  </a>
+	</header>
+        <header class="logo">
+	  <a href="/"><img src="{{ STATIC_URL }}images/icse_logo.jpg" alt="ICSE logo" /></a>
+	</header>
+
+            
+	<nav class="nav_desktop">
+          <ul>
+            <li><a href="/">Home</a>
+	      <ul>
+		<li><a href="">Download</a>
+		  <ul>
+		    <li><a href="/download/promo-banners">Promos and banners</a></li>
+		  </ul>
+		</li>
+	      </ul>
+	    </li>
+	    <li><a href="">Call &amp; Dates</a>
+	      <ul>
+	      	<li><a href="/dates">Important dates</a></li>
+	      </ul>
+	    </li>
+            <li><a href="">Team</a>
+	      <ul>
+	      	<li><a href="/team/organizing-committee">Organizing Committee</a></li>
+	      </ul>
+	    </li>
+            <li><a href="/venue">Venue</a>
+	      <ul>
+	      	<li><a href="/venue#austin">Austin</a></li>
+	      	<li><a href="/venue#travel">Travel</a></li>
+	      	<li><a href="/venue#visa">Visa Support Letters</a></li>
+	      </ul>
+	    </li>
+          </ul>
+        </nav>
+
+
+        <!-- Navigation for mobile -->
+        <nav class="nav_mobile">
+
+	  
+          <a href="#" onclick="toggle_visibility('dropdown');">Menu</a>
+          <nav id="dropdown">
+            <ul>
+              <li><a href="/">Home</a>
+		<ul>
+		  <li><a href="">Download</a>
+		    <ul>
+		      <li><a href="/download/promo-banners">Promos and banners</a></li>
+		    </ul>
+		  </li>
+		</ul>
+	      </li>
+	      <li><a href="">Call &amp; Dates</a>
+		<ul>
+	      	  <li><a href="/dates">Important dates</a></li>
+		</ul>
+	      </li>
+              <li><a href="">Team</a>
+		<ul>
+	      	  <li><a href="/team/organizing-committee">Organizing Committee</a></li>
+		</ul>
+	      </li>
+              <li><a href="/venue">Venue</a>
+		<ul>
+	      	  <li><a href="/venue#austin">Austin</a></li>
+	      	  <li><a href="/venue#travel">Travel</a></li>
+	      	  <li><a href="/venue#visa">Visa Support Letters</a></li>
+		</ul>
+	      </li>
+            </ul>
+          </nav>
+        </nav>
+      {% endblock top %} 
+            
+
+	{% block content %}
+        <article class="info">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+	
+	  <h3> Coming Soon... </h3>
+	  <hr size=4 width="100%"/>
+        </article>
+	{% endblock content %}
+
+      </div><!-- End wrapper -->
+        
+
+
+
+      <!-- Grey Footer -->
+      <footer class="greybar">
+        <em><h6>ICSE 2016 :: May 14-22, 2016 :: Austin, TX</h6></em>
+	<!-- &nbsp; -->
+      </footer>
+      <div class="custom"  >
+	<p style="text-align: center;">SPONSORS</p>
+	<hr />
+      </div>
+      <center>
+	<table style="width: 94.4%;">
+	  <tbody>
+	    <tr>
+	      <td>
+		<a href="http://www.computer.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/IEEE_Computer_Society-logo.jpg" alt="" width="133" height="70" /></a> 
+		
+	      </td>
+	      <td>
+		<a href="http://www.computer.org/portal/web/tcse/home" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/2009TCSE3.jpg" alt="" width="133" height="70" /></a>
+	      </td>
+	      <td>
+		<a href="http://www.acm.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/ACM.jpg" alt="" width="133" height="70" /></a>
+	      </td>
+	      <td>
+		<a href="http://www.sigsoft.org/" target="_blank"><img style="margin-left: auto; margin-right: auto;" src="{{ STATIC_URL }}images/sponsors/sigsoft.logo.jpg" alt="" width="133" height="70" /></a>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+      </center>
+		
+      <div class="custom"  >
+	<hr />
+      </div>
+		
+      <!-- This script activates the drop-down menu for mobile -->
+      <script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+      </script>
+    </body>
+</html>
