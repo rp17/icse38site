@@ -176,7 +176,7 @@ html,body {
     border-top-color:#c5c5c5;
     border-top-width:6px;
     border-top-style:solid;
-    height:80px;
+    height:10px;
 }
 
 /* Type styles */
@@ -277,13 +277,6 @@ p {
 em {
     font-style:italic;
     font-size:1.2em;
-}
-
-
-/* Image alignment style */
-.center_image{
-	margin-left: auto; 
-	margin-right: auto
 }
 
 /* body copy links */
@@ -466,7 +459,7 @@ a {
 
   .nav_desktop ul li {float: left; padding-right: 1px; position: relative;}
 
-  .nav_desktop ul a {display: table-cell; vertical-align: middle; width: 125px; 
+  .nav_desktop ul a {display: table-cell; vertical-align: middle; width: 150px; 
                      height: 50px; text-align: center; background: #000000;text-decoration: none;}
 
   /* .nav_desktop ul a:hover {background:#0000FF;} */
