@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %} ICSE 2016 Austin :: Important Dates {% endblock title %}
+
+{% block content %}
+<!-- <article class="main"> -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+	  
+<h3>Register</h3>
+<hr size=4 width="%94"/>
+
+<form name="formsubmission" action="register.py">
+<table>
+	<tr>
+		<td><h4>Name:</h4></td>
+		<td><input type="text" name="name"></td>
+	</tr>
+	<tr>
+		<td><h4>Affiliation:</h4></td>
+		<td><input type="text" name="affiliation"></td>
+	</tr>
+	<tr>
+		<td><h4>Video Link:</h4></td>
+		<td><input type="text" name="video"></td>
+	</tr>
+	<tr>
+		<td><h4>Terms & Conditions:&nbsp;</h4></td>
+		<td><input type="check" name="termsAccepted"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><br/><input type="Submit" name="Register"></td>
+	</tr>
+</table>
+<br/>
+<br/>
+{% endblock content %}
