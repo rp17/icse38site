@@ -25,12 +25,17 @@ def videoContest(request):
     return render_to_response("videoContest.html", {}, RequestContext(request))
 	
 def formack(request):
+	name = request.POST['name']
+	email = request.POST['email']
+	affiliation = request.POST['affiliation']
+	video = request.POST['video']
+	acceptance = str(request.POST.get('termsAccepted', False))
+	sql = "INSERT INTO registrations (name, email, affiliation, video, acceptance) values ('" + name + "', '" + email + "', '" + affiliation + "', '" + video + "', '" + acceptance + "')"
 	cursor = connection.cursor()
-	cursor.execute("INSERT INTO registrations (name, email, affiliation, video, acceptance) values ('" + request.POST['name'] + "', '"
-		+ request.POST['email'] + "', '" + request.POST['affiliation'] + "', '" + request.POST['video'] + "', '" + request.POST['acceptance'] + "')")
+	cursor.execute(sql)
 	transaction.set_dirty()        
 	transaction.commit()
-    return render_to_response("formack.html", {"name": request.POST['name']}, RequestContext(request))
+	return render_to_response('formack.html', {'name': sql}, RequestContext(request))
 	
 def formsub(request):
     return render_to_response("formsub.html", {}, RequestContext(request))
