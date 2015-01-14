@@ -16,6 +16,8 @@ urlpatterns = patterns('',
 	
 	url(r'^videoContest$', 'icse38.views.videoContest', name='base'),
 	
+	url(r'^formack$', 'icse38.views.formack', name='base'),
+	
 	url(r'^formsub$', 'icse38.views.formsub', name='base'),
 
     url(r'^team/organizing-committee$', 'icse38.views.oc', name='oc'),
@@ -24,7 +26,7 @@ urlpatterns = patterns('',
 
     url(r'^venue$', 'icse38.views.venue', name='venue'),
 
-    url(r'^keynotes$', 'icse38.views.keynotes', name='keynotes'),
+    url(r'^keynotes$', 'icse38.views.keynotes', name='keynotes')
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

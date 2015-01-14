@@ -1,6 +1,12 @@
 from django.shortcuts import render_to_response, get_object_or_404
-from django.template import RequestContext
-
+from django.template import RequestContext, Context
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+#from icse38.models import ContactForm
+#from django import newforms as forms
+#from django.newforms.widgets import *
+from django.core.mail import send_mail, BadHeaderError
+from django.db import connection, transaction
 
 def index(request):
     """
@@ -18,6 +24,14 @@ def dates(request):
 def videoContest(request):
     return render_to_response("videoContest.html", {}, RequestContext(request))
 	
+def formack(request):
+	cursor = connection.cursor()
+	cursor.execute("INSERT INTO registrations (name, email, affiliation, video, acceptance) values ('" + request.POST['name'] + "', '"
+		+ request.POST['email'] + "', '" + request.POST['affiliation'] + "', '" + request.POST['video'] + "', '" + request.POST['acceptance'] + "')")
+	transaction.set_dirty()        
+	transaction.commit()
+    return render_to_response("formack.html", {"name": request.POST['name']}, RequestContext(request))
+	
 def formsub(request):
     return render_to_response("formsub.html", {}, RequestContext(request))
 	
@@ -33,6 +47,23 @@ def venue(request):
 def keynotes(request):
     return render_to_response("keynotes.html", {}, RequestContext(request))
 
+def addbook(request):
+    form = AuthorForm()
+    book_formset = BookFormset(instance=Author())
+
+    if request.POST:
+        form = AuthorForm(request.POST)
+        if form.is_valid():
+            author = form.save()
+            book_formset = BookFormset(request.POST, instance=author)
+            if book_formset.is_valid():
+                book_formset.save()
+            return redirect('/index/')
+
+    return render_to_response('addbook.html',{
+        'form': form, 'formset': book_formset
+    },context_instance=RequestContext(request))
+		
 # def brochures(request):
 #     return render_to_response("brochures.html", {}, RequestContext(request))
 

@@ -1,8 +1,11 @@
-from django.db import models
+from django import newforms as forms
+from django.newforms.widgets import *
+from django.core.mail import send_mail, BadHeaderError
 
-
-class Submission(models.Model):
-    sub_name = models.CharField(max_length=200)
-	sub_affiliation = models.CharField(max_length=200)
-	sub_video = models.CharField(max_length=200)
-    sub_acceptance = models.IntegerField(default=0)
+# A simple contact form with four fields.
+class RegistrationForm(forms.Form):
+	name = forms.CharField(max_length=200)
+	email = forms.CharField(max_length=200)
+	affiliation = forms.CharField(max_length=200)
+	video = forms.CharField(max_length=200)
+    acceptance = forms.IntegerField(default=0)
